@@ -6,6 +6,15 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+body {
+  padding: 16px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .body__container {
   padding: 2rem;
@@ -50,6 +59,9 @@ a {
   width: 100%;
 }
 
+img {
+  padding: 16px;
+}
 /* 
   NAVBAR
 */
@@ -59,6 +71,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  overflow: hidden;
 }
 .nav__container {
   padding-top: 45px;
@@ -73,6 +86,7 @@ nav {
   height: 40px;
   width: 40px;
   margin-right: 12px;
+  padding: 0;
 }
 
 .nav__logo--name {
@@ -308,11 +322,15 @@ input {
 .info__container {
   display: flex;
   width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .info__content {
   line-height: 1.5;
   width: 80%;
+  text-align: start;
 }
 
 .info__img--wrapper {
@@ -342,6 +360,7 @@ input {
   padding: 12px 32px;
   font-weight: 700;
   width: 100%;
+  max-width: 50%;
 }
 
 /* 
@@ -350,6 +369,9 @@ input {
 
 .steps__container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .steps__img {
@@ -373,6 +395,7 @@ input {
 
 .steps__row--title {
   font-size: 20px;
+  text-align: start;
 }
 
 .steps__row--subtitle {
@@ -389,6 +412,9 @@ input {
 
 .values__content {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .values__column--wrapper {
   display: flex;
@@ -681,7 +707,7 @@ hr {
 .faq__content--column {
   margin-top: 20px;
   padding: 16px 40px;
-  width: 80%;
+  width: 100%;
   background-color: lightgray;
   border-radius: 24px;
   display: flex;
@@ -929,11 +955,18 @@ body.no-scroll {
 }
 /* For devices with width up to 768px */
 @media screen and (max-width: 768px) {
+  body {
+    padding: 16px;
+  }
   #hamburger {
     display: block; /* show the button on smaller screens */
-    position: relative;
+    position: absolute;
     right: 32px;
     background-color: transparent;
+  }
+  .values__column--wrapper {
+    display: flex;
+    flex-wrap: wrap;
   }
   /* Add your CSS rules here */
   .nav__links {
@@ -981,6 +1014,12 @@ body.no-scroll {
     width: 100%;
     margin-bottom: 32px;
   }
+  .h2 {
+    font-size: 32px;
+  }
+  .info__header {
+    font-size: 32px;
+  }
   .column__icon--wrapper {
     display: flex;
     justify-content: center;
@@ -1021,9 +1060,9 @@ body.no-scroll {
     width: 100%;
   }
   .values__content {
-    display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
   }
+ 
   .values__column:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -1058,6 +1097,20 @@ body.no-scroll {
   }
   .faq__content--column:not(:last-child) {
     margin-bottom: 30px;
+  }
+  .footer__links--container {
+    flex-direction: column;
+  }
+  .footer__links--content {
+    margin: 32px 0;
+  }
+  .footer__social--container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__logo {
+    padding: 0;
   }
 }
 @media screen and (max-width: 560px) {
@@ -1202,6 +1255,7 @@ body.no-scroll {
     width: 100%;
     text-align: center;
     margin-top: 30px;
+    padding: 0;
   }
   .testimonials__client--container {
     flex-direction: column;
@@ -1223,6 +1277,7 @@ body.no-scroll {
   }
   .cta__btn--container {
     margin-top: 24px;
+    flex-wrap: wrap;
   }
   .faq__content--column {
     width: 100%;
