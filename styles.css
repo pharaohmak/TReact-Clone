@@ -6,8 +6,13 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
-body {
+
+main {
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 section {
@@ -1062,7 +1067,7 @@ body.no-scroll {
   .values__content {
     flex-wrap: wrap;
   }
- 
+
   .values__column:not(:last-child) {
     margin-bottom: 30px;
   }
